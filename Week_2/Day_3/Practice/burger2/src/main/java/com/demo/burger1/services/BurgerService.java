@@ -28,11 +28,11 @@ public class BurgerService {
 		
 	}
 	public BurgerModel getBurgerById(Long id) {
-		Optional<BurgerModel> todo = burgerRepo.findById(id);
-		if(todo.isEmpty()) {
+		Optional<BurgerModel> burger= burgerRepo.findById(id);
+		if(burger.isEmpty()) {
 			return null;
 		} else {
-			return todo.get();
+			return burger.get();
 		}
 		
 	}
